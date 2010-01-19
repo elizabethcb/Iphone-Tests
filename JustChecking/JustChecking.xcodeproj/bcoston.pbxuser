@@ -1,0 +1,152 @@
+// !$*UTF8*$!
+{
+	1D3623240D0F684500981E51 /* JustCheckingAppDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {519, 322}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{50, 462}";
+		};
+	};
+	1D3623250D0F684500981E51 /* JustCheckingAppDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {519, 476}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{235, 404}";
+		};
+	};
+	1D6058900D05DD3D006BFB54 /* JustChecking */ = {
+		activeExec = 0;
+		executables = (
+			1E8CB53C100D37DA00AF15DD /* JustChecking */,
+		);
+	};
+	1E8CB53C100D37DA00AF15DD /* JustChecking */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = JustChecking;
+		sourceDirectories = (
+		);
+	};
+	1E8CB54C100D37F700AF15DD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* JustCheckingAppDelegate.h */;
+		name = "JustCheckingAppDelegate.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 462;
+		vrLoc = 50;
+	};
+	1E8CB54D100D37F700AF15DD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* JustCheckingAppDelegate.m */;
+		name = "JustCheckingAppDelegate.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 404;
+		vrLoc = 0;
+	};
+	1E8CB54E100D37F700AF15DD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* JustCheckingAppDelegate.m */;
+		name = "JustCheckingAppDelegate.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 404;
+		vrLoc = 0;
+	};
+	1E8CB54F100D37F700AF15DD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* JustCheckingAppDelegate.h */;
+		name = "JustCheckingAppDelegate.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 462;
+		vrLoc = 50;
+	};
+	1E8CB554100D37F700AF15DD /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+	};
+	1E8CB555100D37F700AF15DD /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	1E8CB60B100D407500AF15DD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* JustCheckingAppDelegate.m */;
+		name = "JustCheckingAppDelegate.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 404;
+		vrLoc = 235;
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 1E8CB53C100D37DA00AF15DD /* JustChecking */;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* JustChecking */;
+		codeSenseManager = 1E8CB555100D37F700AF15DD /* Code sense */;
+		executables = (
+			1E8CB53C100D37DA00AF15DD /* JustChecking */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					341,
+					20,
+					48.16259765625,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 269301722;
+			PBXWorkspaceStateSaveDate = 269301722;
+		};
+		perUserProjectItems = {
+			1E8CB54C100D37F700AF15DD /* PBXTextBookmark */ = 1E8CB54C100D37F700AF15DD /* PBXTextBookmark */;
+			1E8CB54D100D37F700AF15DD /* PBXTextBookmark */ = 1E8CB54D100D37F700AF15DD /* PBXTextBookmark */;
+			1E8CB54E100D37F700AF15DD /* PBXTextBookmark */ = 1E8CB54E100D37F700AF15DD /* PBXTextBookmark */;
+			1E8CB54F100D37F700AF15DD /* PBXTextBookmark */ = 1E8CB54F100D37F700AF15DD /* PBXTextBookmark */;
+			1E8CB60B100D407500AF15DD /* PBXTextBookmark */ = 1E8CB60B100D407500AF15DD /* PBXTextBookmark */;
+		};
+		sourceControlManager = 1E8CB554100D37F700AF15DD /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+}

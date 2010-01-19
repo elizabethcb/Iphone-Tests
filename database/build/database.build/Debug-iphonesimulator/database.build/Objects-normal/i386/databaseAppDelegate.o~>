@@ -1,0 +1,10 @@
+/Volumes/LEGIT/SlateTech/Iphone test/database/Classes/databaseAppDelegate.m: In function '-[databaseAppDelegate applicationDidFinishLaunching:]':
+/Volumes/LEGIT/SlateTech/Iphone test/database/Classes/databaseAppDelegate.m:28: warning: 'databaseAppDelegate' may not respond to '-checkAndCreateDatabase'
+/Volumes/LEGIT/SlateTech/Iphone test/database/Classes/databaseAppDelegate.m:28: warning: (Messages without a matching method signature
+/Volumes/LEGIT/SlateTech/Iphone test/database/Classes/databaseAppDelegate.m:28: warning: will be assumed to return 'id' and accept
+/Volumes/LEGIT/SlateTech/Iphone test/database/Classes/databaseAppDelegate.m:28: warning: '...' as arguments.)
+/Volumes/LEGIT/SlateTech/Iphone test/database/Classes/databaseAppDelegate.m:29: warning: 'databaseAppDelegate' may not respond to '-readDataFromDatabase'
+/Volumes/LEGIT/SlateTech/Iphone test/database/Classes/databaseAppDelegate.m:35: warning: receiver 'inputController' is a forward class and corresponding @interface may not exist
+/Volumes/LEGIT/SlateTech/Iphone test/database/Classes/databaseAppDelegate.m:36: warning: passing argument 1 of 'initWithRootViewController:' from distinct Objective-C type
+/Volumes/LEGIT/SlateTech/Iphone test/database/Classes/databaseAppDelegate.m:38: warning: receiver 'outputController' is a forward class and corresponding @interface may not exist
+/Volumes/LEGIT/SlateTech/Iphone test/database/Classes/databaseAppDelegate.m:39: warning: passing argument 1 of 'initWithRootViewController:' from distinct Objective-C type

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>files</key>
+	<dict>
+		<key>BluetoothViewController.nib</key>
+		<data>
+		V9/s/fB7Or0SCPjr1LmZLsxY9C8=
+		</data>
+		<key>MainWindow.nib</key>
+		<data>
+		MygJuE0+lRMl/ph1Wi8H6AF+BmA=
+		</data>
+		<key>PkgInfo</key>
+		<data>
+		n57qDP4tZfLD1rCS43W0B4LQjzE=
+		</data>
+		<key>embedded.mobileprovision</key>
+		<data>
+		pzG8zQSGfADoZjHoeeAd83N5+PA=
+		</data>
+		<key>setupViewController.nib</key>
+		<data>
+		3o5urLRbA4r4IgEGnYFnxaXqi4Q=
+		</data>
+	</dict>
+	<key>rules</key>
+	<dict>
+		<key>.*</key>
+		<true/>
+		<key>Info.plist</key>
+		<dict>
+			<key>omit</key>
+			<true/>
+			<key>weight</key>
+			<real>10</real>
+		</dict>
+		<key>ResourceRules.plist</key>
+		<dict>
+			<key>omit</key>
+			<true/>
+			<key>weight</key>
+			<real>100</real>
+		</dict>
+	</dict>
+</dict>
+</plist>

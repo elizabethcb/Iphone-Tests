@@ -1,0 +1,389 @@
+// !$*UTF8*$!
+{
+	1D3623240D0F684500981E51 /* BluetoothAppDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {726, 322}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{44, 450}";
+		};
+	};
+	1D3623250D0F684500981E51 /* BluetoothAppDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {726, 476}}";
+			sepNavSelRange = "{260, 0}";
+			sepNavVisRange = "{261, 370}";
+		};
+	};
+	1D6058900D05DD3D006BFB54 /* Bluetooth */ = {
+		activeExec = 0;
+		executables = (
+			1EE4B9B01059CE26007E9B8C /* Bluetooth */,
+		);
+	};
+	1E05A15A105F2ED100F70A30 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* BluetoothAppDelegate.m */;
+		name = "BluetoothAppDelegate.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 389;
+		vrLoc = 0;
+	};
+	1E77A32410641E2900C3631D /* setupViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {726, 518}}";
+			sepNavSelRange = "{751, 0}";
+			sepNavVisRange = "{250, 600}";
+		};
+	};
+	1E77A32510641E2900C3631D /* setupViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1368, 1610}}";
+			sepNavSelRange = "{1064, 0}";
+			sepNavVisRange = "{2978, 307}";
+		};
+	};
+	1E77A340106421EA00C3631D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1E77A32510641E2900C3631D /* setupViewController.m */;
+		name = "setupViewController.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 383;
+		vrLoc = 0;
+	};
+	1E77A344106421EA00C3631D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1E77A32410641E2900C3631D /* setupViewController.h */;
+		name = "setupViewController.h: 31";
+		rLen = 0;
+		rLoc = 770;
+		rType = 0;
+		vrLen = 633;
+		vrLoc = 285;
+	};
+	1E77A3951064481600C3631D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* BluetoothAppDelegate.h */;
+		name = "BluetoothAppDelegate.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 450;
+		vrLoc = 44;
+	};
+	1E77A3971064481600C3631D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1E77A32510641E2900C3631D /* setupViewController.m */;
+		name = "setupViewController.m: 44";
+		rLen = 0;
+		rLoc = 1064;
+		rType = 0;
+		vrLen = 307;
+		vrLoc = 2978;
+	};
+	1E77A3981064481600C3631D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1E77A32410641E2900C3631D /* setupViewController.h */;
+		name = "setupViewController.h: 30";
+		rLen = 0;
+		rLoc = 751;
+		rType = 0;
+		vrLen = 600;
+		vrLoc = 250;
+	};
+	1EA1128910B24AF600FDA55F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* BluetoothAppDelegate.m */;
+		name = "BluetoothAppDelegate.m: 13";
+		rLen = 0;
+		rLoc = 260;
+		rType = 0;
+		vrLen = 370;
+		vrLoc = 261;
+	};
+	1EA1128A10B24AF600FDA55F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* BluetoothViewController.h */;
+		name = "BluetoothViewController.h: 34";
+		rLen = 0;
+		rLoc = 917;
+		rType = 0;
+		vrLen = 548;
+		vrLoc = 382;
+	};
+	1EA1128B10B24AF600FDA55F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* BluetoothViewController.m */;
+		name = "BluetoothViewController.m: 28";
+		rLen = 0;
+		rLoc = 589;
+		rType = 0;
+		vrLen = 479;
+		vrLoc = 381;
+	};
+	1EA1128C10B24AF600FDA55F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* BluetoothViewController.m */;
+		name = "BluetoothViewController.m: 114";
+		rLen = 9;
+		rLoc = 3391;
+		rType = 0;
+		vrLen = 681;
+		vrLoc = 3164;
+	};
+	1EA1128D10B24AF600FDA55F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* BluetoothViewController.h */;
+		name = "BluetoothViewController.h: 20";
+		rLen = 0;
+		rLoc = 533;
+		rType = 0;
+		vrLen = 563;
+		vrLoc = 0;
+	};
+	1EA1128E10B24AF600FDA55F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* BluetoothAppDelegate.m */;
+		name = "BluetoothAppDelegate.m: 13";
+		rLen = 0;
+		rLoc = 260;
+		rType = 0;
+		vrLen = 370;
+		vrLoc = 261;
+	};
+	1EA1128F10B24AF600FDA55F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* BluetoothViewController.h */;
+		name = "BluetoothViewController.h: 21";
+		rLen = 0;
+		rLoc = 562;
+		rType = 0;
+		vrLen = 653;
+		vrLoc = 273;
+	};
+	1EA1129010B24AF600FDA55F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* BluetoothViewController.m */;
+		name = "BluetoothViewController.m: 114";
+		rLen = 0;
+		rLoc = 3535;
+		rType = 0;
+		vrLen = 681;
+		vrLoc = 3164;
+	};
+	1EA1129110B24AF600FDA55F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* BluetoothViewController.h */;
+		name = "BluetoothViewController.h: 21";
+		rLen = 0;
+		rLoc = 562;
+		rType = 0;
+		vrLen = 490;
+		vrLoc = 443;
+	};
+	1EA1129210B24AF600FDA55F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* BluetoothViewController.m */;
+		name = "BluetoothViewController.m: 47";
+		rLen = 0;
+		rLoc = 1183;
+		rType = 0;
+		vrLen = 585;
+		vrLoc = 863;
+	};
+	1EA1129310B24AF600FDA55F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* BluetoothViewController.h */;
+		name = "BluetoothViewController.h: 21";
+		rLen = 0;
+		rLoc = 562;
+		rType = 0;
+		vrLen = 551;
+		vrLoc = 382;
+	};
+	1EA1129410B24AF600FDA55F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* BluetoothViewController.m */;
+		name = "BluetoothViewController.m: 28";
+		rLen = 0;
+		rLoc = 589;
+		rType = 0;
+		vrLen = 479;
+		vrLoc = 381;
+	};
+	1EA1129510B24AF600FDA55F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* BluetoothViewController.h */;
+		name = "BluetoothViewController.h: 34";
+		rLen = 0;
+		rLoc = 917;
+		rType = 0;
+		vrLen = 548;
+		vrLoc = 382;
+	};
+	1EA1129610B24AF600FDA55F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* BluetoothViewController.m */;
+		name = "BluetoothViewController.m: 114";
+		rLen = 0;
+		rLoc = 3407;
+		rType = 0;
+		vrLen = 546;
+		vrLoc = 1184;
+	};
+	1EA55F2B106362F1001ECDF6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* BluetoothAppDelegate.h */;
+		name = "BluetoothAppDelegate.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 487;
+		vrLoc = 0;
+	};
+	1EE4B9B01059CE26007E9B8C /* Bluetooth */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = Bluetooth;
+		savedGlobals = {
+		};
+		sourceDirectories = (
+		);
+		variableFormatDictionary = {
+		};
+	};
+	1EE4B9BD1059CE32007E9B8C /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+	};
+	1EE4B9BE1059CE32007E9B8C /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	1EE4B9D4105A1168007E9B8C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* BluetoothViewController.h */;
+		name = "BluetoothViewController.h: 15";
+		rLen = 0;
+		rLoc = 680;
+		rType = 0;
+		vrLen = 379;
+		vrLoc = 33;
+	};
+	1EE4B9D5105A1168007E9B8C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* BluetoothViewController.m */;
+		name = "BluetoothViewController.m: 13";
+		rLen = 0;
+		rLoc = 408;
+		rType = 0;
+		vrLen = 518;
+		vrLoc = 33;
+	};
+	28D7ACF60DDB3853001CB0EB /* BluetoothViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {726, 532}}";
+			sepNavSelRange = "{917, 0}";
+			sepNavVisRange = "{382, 548}";
+		};
+	};
+	28D7ACF70DDB3853001CB0EB /* BluetoothViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1062, 2730}}";
+			sepNavSelRange = "{3407, 0}";
+			sepNavVisRange = "{1184, 546}";
+		};
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 1EE4B9B01059CE26007E9B8C /* Bluetooth */;
+		activeSDKPreference = iphoneos3.0;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* Bluetooth */;
+		addToTargets = (
+			1D6058900D05DD3D006BFB54 /* Bluetooth */,
+		);
+		breakpoints = (
+		);
+		codeSenseManager = 1EE4B9BE1059CE32007E9B8C /* Code sense */;
+		executables = (
+			1EE4B9B01059CE26007E9B8C /* Bluetooth */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					548,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 280118661;
+			PBXWorkspaceStateSaveDate = 280118661;
+		};
+		perUserProjectItems = {
+			1E05A15A105F2ED100F70A30 /* PBXTextBookmark */ = 1E05A15A105F2ED100F70A30 /* PBXTextBookmark */;
+			1E77A340106421EA00C3631D /* PBXTextBookmark */ = 1E77A340106421EA00C3631D /* PBXTextBookmark */;
+			1E77A344106421EA00C3631D /* PBXTextBookmark */ = 1E77A344106421EA00C3631D /* PBXTextBookmark */;
+			1E77A3951064481600C3631D /* PBXTextBookmark */ = 1E77A3951064481600C3631D /* PBXTextBookmark */;
+			1E77A3971064481600C3631D /* PBXTextBookmark */ = 1E77A3971064481600C3631D /* PBXTextBookmark */;
+			1E77A3981064481600C3631D /* PBXTextBookmark */ = 1E77A3981064481600C3631D /* PBXTextBookmark */;
+			1EA1128910B24AF600FDA55F /* PBXTextBookmark */ = 1EA1128910B24AF600FDA55F /* PBXTextBookmark */;
+			1EA1128A10B24AF600FDA55F /* PBXTextBookmark */ = 1EA1128A10B24AF600FDA55F /* PBXTextBookmark */;
+			1EA1128B10B24AF600FDA55F /* PBXTextBookmark */ = 1EA1128B10B24AF600FDA55F /* PBXTextBookmark */;
+			1EA1128C10B24AF600FDA55F /* PBXTextBookmark */ = 1EA1128C10B24AF600FDA55F /* PBXTextBookmark */;
+			1EA1128D10B24AF600FDA55F /* PBXTextBookmark */ = 1EA1128D10B24AF600FDA55F /* PBXTextBookmark */;
+			1EA1128E10B24AF600FDA55F /* PBXTextBookmark */ = 1EA1128E10B24AF600FDA55F /* PBXTextBookmark */;
+			1EA1128F10B24AF600FDA55F /* PBXTextBookmark */ = 1EA1128F10B24AF600FDA55F /* PBXTextBookmark */;
+			1EA1129010B24AF600FDA55F /* PBXTextBookmark */ = 1EA1129010B24AF600FDA55F /* PBXTextBookmark */;
+			1EA1129110B24AF600FDA55F /* PBXTextBookmark */ = 1EA1129110B24AF600FDA55F /* PBXTextBookmark */;
+			1EA1129210B24AF600FDA55F /* PBXTextBookmark */ = 1EA1129210B24AF600FDA55F /* PBXTextBookmark */;
+			1EA1129310B24AF600FDA55F /* PBXTextBookmark */ = 1EA1129310B24AF600FDA55F /* PBXTextBookmark */;
+			1EA1129410B24AF600FDA55F /* PBXTextBookmark */ = 1EA1129410B24AF600FDA55F /* PBXTextBookmark */;
+			1EA1129510B24AF600FDA55F /* PBXTextBookmark */ = 1EA1129510B24AF600FDA55F /* PBXTextBookmark */;
+			1EA1129610B24AF600FDA55F /* PBXTextBookmark */ = 1EA1129610B24AF600FDA55F /* PBXTextBookmark */;
+			1EA55F2B106362F1001ECDF6 /* PBXTextBookmark */ = 1EA55F2B106362F1001ECDF6 /* PBXTextBookmark */;
+			1EE4B9D4105A1168007E9B8C /* PBXTextBookmark */ = 1EE4B9D4105A1168007E9B8C /* PBXTextBookmark */;
+			1EE4B9D5105A1168007E9B8C /* PBXTextBookmark */ = 1EE4B9D5105A1168007E9B8C /* PBXTextBookmark */;
+		};
+		sourceControlManager = 1EE4B9BD1059CE32007E9B8C /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+}

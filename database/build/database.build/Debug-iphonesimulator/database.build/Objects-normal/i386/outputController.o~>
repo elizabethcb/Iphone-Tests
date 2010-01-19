@@ -1,0 +1,8 @@
+/Volumes/LEGIT/SlateTech/Iphone test/database/Classes/outputController.m: In function '-[outputController btnRetrieve_clicked:]':
+/Volumes/LEGIT/SlateTech/Iphone test/database/Classes/outputController.m:27: warning: unused variable 'phone'
+/Volumes/LEGIT/SlateTech/Iphone test/database/Classes/outputController.m:26: warning: unused variable 'zip'
+/Volumes/LEGIT/SlateTech/Iphone test/database/Classes/outputController.m:25: warning: unused variable 'state'
+/Volumes/LEGIT/SlateTech/Iphone test/database/Classes/outputController.m:24: warning: unused variable 'city'
+/Volumes/LEGIT/SlateTech/Iphone test/database/Classes/outputController.m:23: warning: unused variable 'address'
+/Volumes/LEGIT/SlateTech/Iphone test/database/Classes/outputController.m:22: warning: unused variable 'last'
+/Volumes/LEGIT/SlateTech/Iphone test/database/Classes/outputController.m:21: warning: unused variable 'first'
