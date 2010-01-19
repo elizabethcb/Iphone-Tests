@@ -15,8 +15,10 @@
 	IBOutlet UILabel *date;
 	
 	IBOutlet UIImageView *storyImage;
+	NSInteger index;
 }
 
+@property (nonatomic) NSInteger index;
 @property (nonatomic, retain) UILabel *storyTitle;
 @property (nonatomic, retain) UILabel *storyAuthor;
 @property (nonatomic, retain) UILabel *date;

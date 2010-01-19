@@ -17,7 +17,7 @@
 	NSThread* myThread;
 	UIActivityIndicatorView * activityIndicator;
 	NSXMLParser * rssParser;
-	NSAutoreleasePool *autoreleasepool;
+	NSMutableData *picData;
 	
 	// a temporary item; added to the "stories" array one at a time, and cleared for the next one
 	NSMutableDictionary * item;
@@ -30,5 +30,6 @@
 }
 - (void)parseXMLFileAtURL:(NSString *)URL;
 - (IBAction)searchPressed:(id)self;
+- (void)performSearchOnString:(NSString*)string;
 
 @end

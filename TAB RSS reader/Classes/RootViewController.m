@@ -19,13 +19,14 @@
 	[theTextField resignFirstResponder];
 	if(myThread)
 		[myThread cancel];
-	[NSThread sleepForTimeInterval:.1];
-	myThread = [[NSThread alloc] initWithTarget:self
-									   selector:@selector(performSearchOnString:)
-										 object:searchField.text];
+	//[NSThread sleepForTimeInterval:.1];
+	//myThread = [[NSThread alloc] initWithTarget:self
+	//								   selector:@selector(performSearchOnString:)
+	//									 object:searchField.text];
 	[[DataSource sharedDataSource] empty];
-	[myThread start];
-	[self performSelector:@selector(refreshData) withObject:nil afterDelay:(NSTimeInterval) .5];	
+	[self performSearchOnString:searchField.text];
+	//[myThread start];
+	//[self performSelector:@selector(refreshData) withObject:nil afterDelay:(NSTimeInterval) .5];
 	return YES;
 }
 
@@ -34,13 +35,14 @@
 	[searchField resignFirstResponder];
 	if(myThread)
 		[myThread cancel];
-	[NSThread sleepForTimeInterval:.1];
-	myThread = [[NSThread alloc] initWithTarget:self
-									   selector:@selector(performSearchOnString:)
-										 object:searchField.text];
+	//[NSThread sleepForTimeInterval:.1];
+	//myThread = [[NSThread alloc] initWithTarget:self
+	//								   selector:@selector(performSearchOnString:)
+	//									 object:searchField.text];
 	[[DataSource sharedDataSource] empty];
-	[myThread start];
-	[self performSelector:@selector(refreshData) withObject:nil afterDelay:(NSTimeInterval) .5];
+	[self performSearchOnString:searchField.text];
+	//[myThread start];
+	//[self performSelector:@selector(refreshData) withObject:nil afterDelay:(NSTimeInterval) .5];
 }
 
 
@@ -88,8 +90,23 @@
 		cell.storyTitle.text = [[[DataSource sharedDataSource] objectAtIndex: storyIndex] objectForKey: @"title"];
 		cell.storyAuthor.text = [[[DataSource sharedDataSource] objectAtIndex: storyIndex] objectForKey: @"author"];
 		cell.date.text = [[[DataSource sharedDataSource] objectAtIndex: storyIndex] objectForKey: @"date"];
-		UIImage *tempImage = [[UIImage alloc] initWithData:[[[DataSource sharedDataSource] objectAtIndex: storyIndex] objectForKey: @"imageData"]];
-		cell.storyImage.image = tempImage;	
+		cell.storyImage.image = nil;
+		//UIImage *tempImage = [[UIImage alloc] initWithData:[[[DataSource sharedDataSource] objectAtIndex: storyIndex] objectForKey: @"imageData"]];
+		//cell.storyImage.image = tempImage;
+		NSThread *tempThread = [[NSThread alloc] initWithTarget:self
+													   selector:@selector(addPicToCell:)
+														 object:cell];
+		[tempThread start];
+		/*//alternate version to be implemented
+		// create the request
+		NSURLRequest *theRequest=[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.apple.com/"]
+												  cachePolicy:NSURLRequestUseProtocolCachePolicy
+											  timeoutInterval:60.0];
+		// create the connection with the request
+		// and start loading the data
+		NSURLConnection *theConnection=[[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+		 */
+		cell.index = storyIndex;
 		return cell;
 	}
 }
@@ -127,15 +144,15 @@
 		[myThread start];
 	}
 	 */
-	autoreleasepool = [[NSAutoreleasePool alloc] init];
-	myThread = [[NSThread alloc] init];
-	[self performSelector:@selector(refreshData) withObject:nil afterDelay:(NSTimeInterval) .5];
+	//myThread = [[NSThread alloc] init];
+	//[self performSelector:@selector(refreshData) withObject:nil afterDelay:(NSTimeInterval) .5];
+	activityIndicator = [[UIActivityIndicatorView alloc] init];
 }
 
 - (void)performSearchOnString:(NSString*)string
 {
 	string = [string stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-	NSString *path = [NSString stringWithFormat:@"http://search.twitter.com/search.rss?q=%@&rpp=5",string];
+	NSString *path = [NSString stringWithFormat:@"http://search.twitter.com/search.rss?q=%@&rpp=50",string];
 	[self parseXMLFileAtURL:path];
 }
 
@@ -150,6 +167,29 @@
 	}
 }
 
+-(void)addPicToCell:(customCell*)theCell {
+	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+	NSArray *tempArray = [[NSArray alloc] initWithArray:[newsTable visibleCells]];
+	customCell* tempCell;
+	for(id currentCell in tempArray) {
+		tempCell = (customCell*)currentCell;
+		if(tempCell.index == theCell.index) {
+			NSString *string = [[[NSString alloc] initWithString:[[[DataSource sharedDataSource] objectAtIndex: theCell.index] objectForKey: @"imageData"]] autorelease];
+			NSData *tempData = [[[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:string]] autorelease];
+			if(tempData)
+			{
+				UIImage *tempImage = [[[UIImage alloc] initWithData:tempData] autorelease];
+				theCell.storyImage.image = tempImage;
+				//[tempImage release];
+			}
+			//[tempData release];
+			//[string release];
+		}
+	}
+	[pool drain];
+}
+
+
 
 - (void)viewWillDisappear:(BOOL)animated {
 }
@@ -158,10 +198,13 @@
 }
 
 
+#pragma mark parser methods
 
 
 - (void)parserDidStartDocument:(NSXMLParser *)parser{	
 	NSLog(@"found file and started parsing");
+	[self.view addSubview:activityIndicator];
+	[activityIndicator startAnimating];
 	
 }
 
@@ -199,6 +242,7 @@
 	if([[NSThread currentThread] isCancelled]){
 		[NSThread exit];
 	}
+	//NSAutoreleasePool *autoreleasepool = [[NSAutoreleasePool alloc] init];
 	//NSLog(@"found this element: %@", elementName);
 	currentElement = [elementName copy];
 	if ([elementName isEqualToString:@"item"]) {
@@ -211,6 +255,7 @@
 		currentImageURL = [[NSMutableString alloc] init];
 		currentAuthor = [[NSMutableString alloc] init];
 	}
+	//[autoreleasepool release];
 }
 
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName{     
@@ -224,7 +269,8 @@
 		[item setObject:currentLink forKey:@"link"];
 		[item setObject:currentSummary forKey:@"summary"];
 		[item setObject:currentDate forKey:@"date"];
-		[item setObject:[NSData dataWithContentsOfURL:[NSURL URLWithString:currentImageURL]] forKey:@"imageData"];
+		//[item setObject:[NSData dataWithContentsOfURL:[NSURL URLWithString:currentImageURL]] forKey:@"imageData"];
+		[item setObject:currentImageURL forKey:@"imageData"];
 		[item setObject:currentAuthor forKey:@"author"];
 		[[DataSource sharedDataSource] insertDictionaryAtTail:[item copy]];
 		NSLog(@"adding story: %@", currentTitle);
@@ -264,11 +310,60 @@
 	
 	NSLog(@"all done!");
 	NSLog(@"stories array has %d items", [[DataSource sharedDataSource] count]);
-	[NSThread exit];
+	[newsTable reloadData];
+	//[NSThread exit];
 }
 
 
+#pragma mark NSURLConnection methods
 
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
+{
+    // this method is called when the server has determined that it
+    // has enough information to create the NSURLResponse
+	
+    // it can be called multiple times, for example in the case of a
+    // redirect, so each time we reset the data.
+    // receivedData is declared as a method instance elsewhere
+    picData = [[NSMutableData alloc] initWithCapacity:2048];
+}
+
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
+{
+    // append the new data to the receivedData
+    // receivedData is declared as a method instance elsewhere
+    [picData appendData:data];
+}
+
+
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
+{
+    // release the connection, and the data object
+    [connection release];
+    // receivedData is declared as a method instance elsewhere
+    [picData release];
+	
+    // inform the user
+    NSLog(@"Connection failed! Error - %@ %@",
+          [error localizedDescription],
+          [[error userInfo] objectForKey:NSErrorFailingURLStringKey]);
+}
+
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection
+{
+    // do something with the data
+    // receivedData is declared as a method instance elsewhere
+    NSLog(@"Succeeded! Received %d bytes of data",[picData length]);
+	
+    // release the connection, and the data object
+    [connection release];
+    [picData release];
+}
+
+
+#pragma mark final class methods
 
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -284,7 +379,6 @@
 
 
 - (void)dealloc {
-	[autoreleasepool release];
 	[currentElement release];
 	[rssParser release];
 	[item release];
