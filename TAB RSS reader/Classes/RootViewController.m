@@ -10,7 +10,15 @@
 #import "TAB_RSS_readerAppDelegate.h"
 #import "customCell.h"
 #import "DataSource.h"
+#import "StringHelper.h"
 
+//cell Constants
+#define kTextViewFontSize		14.0
+#define kDefaultCellHeight		67.0
+#define kDefaultLabelWidth		216.0
+#define kDefaultMinLabelHeight	21.0
+#define kDefaultAuthorY			33.0
+#define kDefaultDateY			59.0
 
 @implementation RootViewController
 
@@ -65,6 +73,19 @@
 }
 
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath  { 
+	if([[DataSource sharedDataSource] count] == 0){
+		return kDefaultCellHeight + kDefaultMinLabelHeight;
+	}
+	NSInteger storyIndex = [indexPath indexAtPosition: [indexPath length] - 1];
+	NSString *label = [[[DataSource sharedDataSource] objectAtIndex: storyIndex] objectForKey: @"title"];
+    CGFloat height = [label ST_textHeightForSystemFontOfSize:kTextViewFontSize AndLabelWidth:kDefaultLabelWidth];
+	if(height < kDefaultMinLabelHeight)
+		height = kDefaultMinLabelHeight;
+    return kDefaultCellHeight + height;
+}
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	if([[DataSource sharedDataSource] count] == 0){
 		UITableViewCell *cell = [[UITableViewCell alloc] init];
@@ -87,7 +108,12 @@
 		
 		// Set up the cell
 		NSInteger storyIndex = [indexPath indexAtPosition: [indexPath length] - 1];
-		cell.storyTitle.text = [[[DataSource sharedDataSource] objectAtIndex: storyIndex] objectForKey: @"title"];
+		NSString *label = [[[DataSource sharedDataSource] objectAtIndex: storyIndex] objectForKey: @"title"];
+		CGFloat offset = [label ST_textHeightForSystemFontOfSize:kTextViewFontSize AndLabelWidth:kDefaultLabelWidth]-kDefaultMinLabelHeight;
+		cell.storyAuthor.frame = CGRectMake(cell.storyAuthor.frame.origin.x, kDefaultAuthorY + offset, cell.storyAuthor.frame.size.width, cell.storyAuthor.frame.size.height);
+		cell.date.frame = CGRectMake(cell.date.frame.origin.x, kDefaultDateY + offset, cell.date.frame.size.width, cell.date.frame.size.height);
+		cell.storyTitle.frame = [[label ST_sizeCellLabelWithSystemFontOfSize:kTextViewFontSize LabelWidth:kDefaultLabelWidth AndOrigin:cell.storyTitle.frame.origin] frame];
+		cell.storyTitle.text = label;
 		cell.storyAuthor.text = [[[DataSource sharedDataSource] objectAtIndex: storyIndex] objectForKey: @"author"];
 		cell.date.text = [[[DataSource sharedDataSource] objectAtIndex: storyIndex] objectForKey: @"date"];
 		cell.storyImage.image = nil;

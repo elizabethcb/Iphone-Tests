@@ -14,6 +14,7 @@
 		1E1DA40710FE94CD0040EA68 /* customCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E1DA40610FE94CD0040EA68 /* customCell.m */; };
 		1E1DA49810FEB9570040EA68 /* customCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E1DA49710FEB9570040EA68 /* customCell.xib */; };
 		1EC3E8DE10FEE97400279170 /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC3E8DD10FEE97400279170 /* DataSource.m */; };
+		1EFE8C1D110830EF008A988C /* StringHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFE8C1C110830EF008A988C /* StringHelper.m */; };
 		2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
 		2899E5600DE3E45000AC0155 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E55F0DE3E45000AC0155 /* RootViewController.xib */; };
 		28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
@@ -32,6 +33,8 @@
 		1EC3E8DC10FEE97400279170 /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataSource.h; path = ../DataSource.h; sourceTree = "<group>"; };
 		1EC3E8DD10FEE97400279170 /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataSource.m; path = ../DataSource.m; sourceTree = "<group>"; };
 		1EC3E8DF10FEEA0000279170 /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
+		1EFE8C1B110830EF008A988C /* StringHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringHelper.h; sourceTree = "<group>"; };
+		1EFE8C1C110830EF008A988C /* StringHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringHelper.m; sourceTree = "<group>"; };
 		2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		2899E55F0DE3E45000AC0155 /* RootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
 		28A0AAE50D9B0CCF005BE974 /* TAB_RSS_reader_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAB_RSS_reader_Prefix.pch; sourceTree = "<group>"; };
@@ -67,6 +70,8 @@
 				28C286E00D94DF7D0034E888 /* RootViewController.m */,
 				1D3623240D0F684500981E51 /* TAB_RSS_readerAppDelegate.h */,
 				1D3623250D0F684500981E51 /* TAB_RSS_readerAppDelegate.m */,
+				1EFE8C1B110830EF008A988C /* StringHelper.h */,
+				1EFE8C1C110830EF008A988C /* StringHelper.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -189,6 +194,7 @@
 				28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */,
 				1E1DA40710FE94CD0040EA68 /* customCell.m in Sources */,
 				1EC3E8DE10FEE97400279170 /* DataSource.m in Sources */,
+				1EFE8C1D110830EF008A988C /* StringHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
