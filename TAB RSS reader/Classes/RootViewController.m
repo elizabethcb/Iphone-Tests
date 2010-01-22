@@ -115,7 +115,27 @@
 		cell.storyTitle.frame = [[label ST_sizeCellLabelWithSystemFontOfSize:kTextViewFontSize LabelWidth:kDefaultLabelWidth AndOrigin:cell.storyTitle.frame.origin] frame];
 		cell.storyTitle.text = label;
 		cell.storyAuthor.text = [[[DataSource sharedDataSource] objectAtIndex: storyIndex] objectForKey: @"author"];
-		cell.date.text = [[[DataSource sharedDataSource] objectAtIndex: storyIndex] objectForKey: @"date"];
+		NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+		[dateFormatter setTimeStyle:NSDateFormatterFullStyle];
+		[dateFormatter setFormatterBehavior:NSDateFormatterBehavior10_4];
+		[dateFormatter setDateFormat:@"EEE, dd LLL yyyy HH:mm:ss Z"];
+		NSString *temp = [[[DataSource sharedDataSource] objectAtIndex: storyIndex] objectForKey: @"date"];
+		temp = [temp stringByReplacingOccurrencesOfString:@"\n" withString:@""];
+		NSDate *date = [[dateFormatter dateFromString:temp] autorelease];
+		// Create the NSDates
+		NSDate *now = [[[NSDate alloc] init] autorelease]; 
+		
+		// Get conversion to months, days, hours, minutes
+		unsigned int unitFlags = NSSecondCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSDayCalendarUnit | NSMonthCalendarUnit;
+		
+		// Get the system calendar
+		NSCalendar *sysCalendar = [NSCalendar currentCalendar];
+		
+		NSDateComponents *conversionInfo = [sysCalendar components:unitFlags fromDate:date  toDate:now  options:0];
+		
+		NSString *StringDate = [[NSString alloc] initWithFormat:@"%dsec %dmin %dhours %ddays %dmoths",[conversionInfo second], [conversionInfo minute], [conversionInfo hour], [conversionInfo day], [conversionInfo month]];
+		
+		cell.date.text = StringDate;
 		cell.storyImage.image = nil;
 		//UIImage *tempImage = [[UIImage alloc] initWithData:[[[DataSource sharedDataSource] objectAtIndex: storyIndex] objectForKey: @"imageData"]];
 		//cell.storyImage.image = tempImage;
