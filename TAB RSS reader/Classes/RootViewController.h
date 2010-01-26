@@ -31,5 +31,6 @@
 - (void)parseXMLFileAtURL:(NSString *)URL;
 - (IBAction)searchPressed:(id)self;
 - (void)performSearchOnString:(NSString*)string;
+- (NSString*)formatDateString:(NSString*)date;
 
 @end

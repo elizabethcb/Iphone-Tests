@@ -115,25 +115,12 @@
 		cell.storyTitle.frame = [[label ST_sizeCellLabelWithSystemFontOfSize:kTextViewFontSize LabelWidth:kDefaultLabelWidth AndOrigin:cell.storyTitle.frame.origin] frame];
 		cell.storyTitle.text = label;
 		cell.storyAuthor.text = [[[DataSource sharedDataSource] objectAtIndex: storyIndex] objectForKey: @"author"];
-		NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-		[dateFormatter setTimeStyle:NSDateFormatterFullStyle];
-		[dateFormatter setFormatterBehavior:NSDateFormatterBehavior10_4];
-		[dateFormatter setDateFormat:@"EEE, dd LLL yyyy HH:mm:ss Z"];
-		NSString *temp = [[[DataSource sharedDataSource] objectAtIndex: storyIndex] objectForKey: @"date"];
-		temp = [temp stringByReplacingOccurrencesOfString:@"\n" withString:@""];
-		NSDate *date = [[dateFormatter dateFromString:temp] autorelease];
-		// Create the NSDates
-		NSDate *now = [[[NSDate alloc] init] autorelease]; 
 		
-		// Get conversion to months, days, hours, minutes
-		unsigned int unitFlags = NSSecondCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSDayCalendarUnit | NSMonthCalendarUnit;
 		
-		// Get the system calendar
-		NSCalendar *sysCalendar = [NSCalendar currentCalendar];
+		//NSString *StringDate = [[NSString alloc] initWithFormat:@"%dsec %dmin %dhours %ddays %dmoths",[conversionInfo second], [conversionInfo minute], [conversionInfo hour], [conversionInfo day], [conversionInfo month]];
 		
-		NSDateComponents *conversionInfo = [sysCalendar components:unitFlags fromDate:date  toDate:now  options:0];
+		NSString *StringDate = [[NSString alloc] initWithString:[ self formatDateString:[[[DataSource sharedDataSource] objectAtIndex: storyIndex] objectForKey: @"date"]]];
 		
-		NSString *StringDate = [[NSString alloc] initWithFormat:@"%dsec %dmin %dhours %ddays %dmoths",[conversionInfo second], [conversionInfo minute], [conversionInfo hour], [conversionInfo day], [conversionInfo month]];
 		
 		cell.date.text = StringDate;
 		cell.storyImage.image = nil;
@@ -199,6 +186,7 @@
 {
 	string = [string stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 	NSString *path = [NSString stringWithFormat:@"http://search.twitter.com/search.rss?q=%@&rpp=50",string];
+	//NSString *path = [NSString stringWithFormat:@"http://%@.campdx.com/feed",string];
 	[self parseXMLFileAtURL:path];
 }
 
@@ -234,6 +222,103 @@
 	}
 	[pool drain];
 }
+
+
+- (NSString*)formatDateString:(NSString*)date {
+	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+	[dateFormatter setTimeStyle:NSDateFormatterFullStyle];
+	[dateFormatter setFormatterBehavior:NSDateFormatterBehavior10_4];
+	[dateFormatter setDateFormat:@"EEE, dd LLL yyyy HH:mm:ss Z"];
+	date = [date stringByReplacingOccurrencesOfString:@"\n" withString:@""];
+	NSDate *StoryDate = [[dateFormatter dateFromString:date] autorelease];
+	// Create the NSDates
+	NSDate *now = [[[NSDate alloc] init] autorelease]; 
+	
+	// Get conversion to months, days, hours, minutes
+	unsigned int unitFlags = NSSecondCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSDayCalendarUnit | NSMonthCalendarUnit | NSYearCalendarUnit;
+	
+	// Get the system calendar
+	NSCalendar *sysCalendar = [NSCalendar currentCalendar];
+	
+	NSDateComponents *nowComponents = [sysCalendar components:unitFlags fromDate:[NSDate date]];
+	NSDateComponents *timeAgo = [sysCalendar components:unitFlags fromDate:StoryDate  toDate:now  options:0];
+	NSDateComponents *storyTime = [sysCalendar components:unitFlags fromDate:StoryDate];
+	
+	if([timeAgo year])
+		return @"over a year ago";
+	if([timeAgo month]) {
+		if([timeAgo month] == 1)
+			return @"about a month ago";
+		else
+			return [NSString stringWithFormat:@"%d months ago", [timeAgo month]];
+	}
+	if([nowComponents day] - [storyTime day]) {
+		if([nowComponents day] - [storyTime day] == 1){
+			if([storyTime hour] > 12)
+				return [NSString stringWithFormat:@"yesterday %d:%02d pm", [storyTime hour]-12, [storyTime minute]];
+			if([storyTime hour] == 12)
+				return [NSString stringWithFormat:@"yesterday 12:%02d pm", [storyTime minute]];
+			if([storyTime hour] == 0)
+				return [NSString stringWithFormat:@"yesterday 12:%02d am", [storyTime minute]];
+			return [NSString stringWithFormat:@"yesterday %d:%02d am", [storyTime hour], [storyTime minute]];
+		}
+		else{
+			if([storyTime hour] > 12)
+				return [NSString stringWithFormat:@"%d days ago  %d:%02d pm", [nowComponents day] - [storyTime day], [storyTime hour]-12, [storyTime minute]];
+			if([storyTime hour] == 12)
+				return [NSString stringWithFormat:@"%d days ago  12:%02d pm", [nowComponents day] - [storyTime day], [storyTime minute]];
+			if([storyTime hour] == 0)
+				return [NSString stringWithFormat:@"%d days ago  12:%02d am", [nowComponents day] - [storyTime day], [storyTime minute]];
+			return [NSString stringWithFormat:@"%d days ago  %d:%02d am", [nowComponents day] - [storyTime day], [storyTime hour], [storyTime minute]];
+		}
+	}
+	if([timeAgo hour]) {
+		if([timeAgo hour] == 1)
+			return @"about an hour ago";
+		else{
+			if([storyTime hour] > 12)
+				return [NSString stringWithFormat:@"today %d:%02d pm", [storyTime hour]-12, [storyTime minute]];
+			if([storyTime hour] == 12)
+				return [NSString stringWithFormat:@"today 12:%02d pm", [storyTime minute]];
+			if([storyTime hour] == 0)
+				return [NSString stringWithFormat:@"today 12:%02d am", [storyTime minute]];
+			return [NSString stringWithFormat:@"today %d:%02d am", [storyTime hour], [storyTime minute]];
+		}
+	}
+	if([timeAgo minute]) {
+		if([timeAgo minute] == 1)
+			return @"about a minute ago";
+		else
+			return [NSString stringWithFormat:@"%d minutes ago", [timeAgo minute]];
+	}
+	if([timeAgo second]) {
+		if([timeAgo second] == 1)
+			return @"about a second ago";
+		else
+			return @"less than a minute ago";
+	}
+	return @"less than a second ago";
+}
+
+/*
+-(NSString*)getStringFromDateComponenents:(int)years and:(int)months and:(int)days and:(int)hours and:(int)minutes {
+	if(years)
+		return @"over a year ago";
+	if(months) {
+		if(months == 1)
+			return @"about a month ago";
+		else
+			return [NSString stringWithFormat:@"%d months ago", months];
+	}
+	if(days) {
+		if(days == 1)
+			return [NSString stringWithFormat:@"yesterday %d:%d", hours, minutes];
+		else
+			return [NSString stringWithFormat:@"%d days ago %d:%d", days, hours, minutes];
+	}
+	return [NSString stringWithFormat:@"today %d:%d", hours, minutes];
+}
+*/	
 
 
 

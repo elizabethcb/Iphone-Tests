@@ -326,20 +326,20 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>1E17856911099BC5001DF369</string>
+										<string>1E399A75110EEAB400022F1F</string>
 										<key>history</key>
 										<array>
 											<string>1E1DA4A910FEBE0B0040EA68</string>
-											<string>1E00E9EA10FF33A800CCD760</string>
-											<string>1E00E9EB10FF33A800CCD760</string>
 											<string>1E226B7E11058389003826D0</string>
 											<string>1EFE8C3811083AF8008A988C</string>
 											<string>1EFE8C7B11084185008A988C</string>
 											<string>1EFE8C9D11084936008A988C</string>
 											<string>1EFE8CA7110849C3008A988C</string>
 											<string>1EFE8CA8110849C3008A988C</string>
-											<string>1EFE8CA9110849C3008A988C</string>
-											<string>1EFE8CAD110849C3008A988C</string>
+											<string>1E399A62110EEAB400022F1F</string>
+											<string>1E399A63110EEAB400022F1F</string>
+											<string>1E399A64110EEAB400022F1F</string>
+											<string>1E399A65110EEAB400022F1F</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -354,6 +354,21 @@
 											<string>1EC3E9EE10FEFD0600279170</string>
 											<string>1EFE8C23110835D7008A988C</string>
 											<string>1EFE8C24110835D7008A988C</string>
+											<string>1E399A66110EEAB400022F1F</string>
+											<string>1E399A67110EEAB400022F1F</string>
+											<string>1E399A68110EEAB400022F1F</string>
+											<string>1E399A69110EEAB400022F1F</string>
+											<string>1E399A6A110EEAB400022F1F</string>
+											<string>1E399A6B110EEAB400022F1F</string>
+											<string>1E399A6C110EEAB400022F1F</string>
+											<string>1E399A6D110EEAB400022F1F</string>
+											<string>1E399A6E110EEAB400022F1F</string>
+											<string>1E399A6F110EEAB400022F1F</string>
+											<string>1E399A70110EEAB400022F1F</string>
+											<string>1E399A71110EEAB400022F1F</string>
+											<string>1E399A72110EEAB400022F1F</string>
+											<string>1E399A73110EEAB400022F1F</string>
+											<string>1E399A74110EEAB400022F1F</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -411,9 +426,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>1E1785341109929B001DF369</string>
+				<string>1E399A76110EEAB400022F1F</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>1E1785351109929B001DF369</string>
+				<string>1E399A77110EEAB400022F1F</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -547,12 +562,12 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1E17857111099BC5001DF369</string>
-		<string>1E17857211099BC5001DF369</string>
+		<string>1E399A78110EEAB400022F1F</string>
+		<string>1E399A79110EEAB400022F1F</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>1EAD3AF210E999DD0031BC57</string>
-		<string>/Users/bcoston/Public/SlateTech/Iphone test/TAB RSS reader/TAB RSS reader.xcodeproj</string>
 		<string>1CD10A99069EF8BA00B06720</string>
+		<string>/Users/bcoston/Public/SlateTech/Iphone test/TAB RSS reader/TAB RSS reader.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>33 423 1236 515 0 0 1280 938 </string>
@@ -632,7 +647,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1EAD3AF210E999DD0031BC57</string>
-				<string>1E1785361109929B001DF369</string>
+				<string>1E399A60110EEAB300022F1F</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -674,8 +689,8 @@
 										<string>yes</string>
 										<key>sizes</key>
 										<array>
-											<string>{{0, 0}, {560, 375}}</string>
-											<string>{{560, 0}, {667, 375}}</string>
+											<string>{{0, 0}, {560, 376}}</string>
+											<string>{{560, 0}, {667, 376}}</string>
 										</array>
 									</dict>
 									<key>VerticalSplitView</key>
@@ -690,8 +705,8 @@
 										<string>yes</string>
 										<key>sizes</key>
 										<array>
-											<string>{{0, 0}, {1227, 375}}</string>
-											<string>{{0, 375}, {1227, 334}}</string>
+											<string>{{0, 0}, {1227, 376}}</string>
+											<string>{{0, 376}, {1227, 333}}</string>
 										</array>
 									</dict>
 								</dict>
@@ -724,7 +739,7 @@
 										<real>341</real>
 									</array>
 									<key>Frame</key>
-									<string>{{560, 0}, {667, 375}}</string>
+									<string>{{560, 0}, {667, 376}}</string>
 									<key>RubberWindowFrame</key>
 									<string>3 188 1227 750 0 0 1280 938 </string>
 								</dict>
@@ -752,13 +767,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>1E17856A11099BC5001DF369</string>
+				<string>1E399A25110EBD4E00022F1F</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>1E17856B11099BC5001DF369</string>
-				<string>1E17856C11099BC5001DF369</string>
-				<string>1E17856D11099BC5001DF369</string>
-				<string>1E17856E11099BC5001DF369</string>
-				<string>1E17856F11099BC5001DF369</string>
+				<string>1E399A26110EBD4E00022F1F</string>
+				<string>1E399A27110EBD4E00022F1F</string>
+				<string>1E399A28110EBD4E00022F1F</string>
+				<string>1E399A29110EBD4E00022F1F</string>
+				<string>1E399A2A110EBD4E00022F1F</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -767,7 +782,7 @@
 			<key>WindowToolGUID</key>
 			<string>1CD10A99069EF8BA00B06720</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
@@ -912,7 +927,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C78EAAD065D492600B07095</string>
-				<string>1E17857011099BC5001DF369</string>
+				<string>1E399A61110EEAB300022F1F</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>
