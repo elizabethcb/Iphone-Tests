@@ -16,9 +16,9 @@
     CGFloat maxHeight = 9999;
     CGSize maximumLabelSize = CGSizeMake(width,maxHeight);
 	
-    CGSize expectedLabelSize = [self sizeWithFont:[UIFont systemFontOfSize:size] constrainedToSize:maximumLabelSize lineBreakMode:UILineBreakModeWordWrap]; 
+    CGSize expectedLabelSizeWordWrap = [self sizeWithFont:[UIFont systemFontOfSize:size] constrainedToSize:maximumLabelSize lineBreakMode:UILineBreakModeWordWrap]; 
 	
-    return expectedLabelSize.height;
+	return expectedLabelSizeWordWrap.height;
 }
 
 - (UILabel *)ST_sizeCellLabelWithSystemFontOfSize:(CGFloat)size LabelWidth:(CGFloat)width AndOrigin:(CGPoint)origin {
@@ -29,6 +29,7 @@
     cellLabel.backgroundColor = [UIColor clearColor];
     cellLabel.textAlignment = UITextAlignmentLeft;
     cellLabel.font = [UIFont systemFontOfSize:size];
+	cellLabel.lineBreakMode = UILineBreakModeWordWrap;
 	
     cellLabel.text = self; 
     cellLabel.numberOfLines = 0; 
