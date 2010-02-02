@@ -257,6 +257,26 @@
 		else
 			return [NSString stringWithFormat:@"%d months ago", [timeAgo month]];
 	}
+	if([nowComponents month] - [storyTime month]){
+		if([nowComponents day] - [storyTime day] == 1){
+			if([storyTime hour] > 12)
+				return [NSString stringWithFormat:@"yesterday %d:%02d pm", [storyTime hour]-12, [storyTime minute]];
+			if([storyTime hour] == 12)
+				return [NSString stringWithFormat:@"yesterday 12:%02d pm", [storyTime minute]];
+			if([storyTime hour] == 0)
+				return [NSString stringWithFormat:@"yesterday 12:%02d am", [storyTime minute]];
+			return [NSString stringWithFormat:@"yesterday %d:%02d am", [storyTime hour], [storyTime minute]];
+		}
+		else{
+			if([storyTime hour] > 12)
+				return [NSString stringWithFormat:@"%d days ago  %d:%02d pm", [timeAgo day], [storyTime hour]-12, [storyTime minute]];
+			if([storyTime hour] == 12)
+				return [NSString stringWithFormat:@"%d days ago  12:%02d pm", [timeAgo day], [storyTime minute]];
+			if([storyTime hour] == 0)
+				return [NSString stringWithFormat:@"%d days ago  12:%02d am", [timeAgo day], [storyTime minute]];
+			return [NSString stringWithFormat:@"%d days ago  %d:%02d am", [timeAgo day], [storyTime hour], [storyTime minute]];
+		}
+	}
 	if([nowComponents day] - [storyTime day]) {
 		if([nowComponents day] - [storyTime day] == 1){
 			if([storyTime hour] > 12)
